@@ -31,6 +31,17 @@ const style = StyleSheet.create({
   sectionContent: {
     marginTop: "10%",
   },
+  contentRow: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  contentRowLeft: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+  },
   button: {
     height: 40,
     marginTop: 4,
@@ -52,70 +63,141 @@ const style = StyleSheet.create({
     marginTop: 30,
     marginBottom: 30,
   },
+  containerWhite: {
+    backgroundColor: "#fff",
+    paddingVertical: 20,
+    paddingHorizontal: 20,
+    borderRadius: 20,
+    elevation: 2,
+  },
+  hr: {
+    backgroundColor: "#A2A2A2",
+    height: 1,
+    width: "100%",
+    marginVertical: 10,
+  },
 });
 
 const CheckoutScreen = () => {
   return (
     <View style={commonStyle.bg}>
+      <Text
+        style={[
+          commonStyle.mt20,
+          commonStyle.black,
+          commonStyle.bold,
+          commonStyle.XL,
+          style.title,
+        ]}
+      >
+        Delivery
+      </Text>
+      <View style={[style.contentRow, style.sectionContent]}>
+        <Text style={[commonStyle.black, commonStyle.semiBold, commonStyle.L]}>
+          Address details
+        </Text>
+        <Text style={[commonStyle.grey, commonStyle.semiBold, commonStyle.M]}>
+          Change
+        </Text>
+      </View>
+      <View style={[style.containerWhite, style.subTitle]}>
         <Text
           style={[
             commonStyle.black,
             commonStyle.bold,
-            commonStyle.XL,
-            style.title,
-          ]}
-        >
-          Checkout
-        </Text>
-        <Text
-          style={[
-            commonStyle.black,
-            commonStyle.semiBold,
-            commonStyle.L,
-            style.sectionTitle,
-          ]}
-        >
-          Delivery info
-        </Text>
-        <Text
-          style={[
-            commonStyle.grey,
-            commonStyle.semiBold,
             commonStyle.M,
             style.subTitle,
           ]}
         >
-          Delivered only on monday until friday from 1 pm to 7 pm
+          Iskandar Street
         </Text>
-        <Text
-          style={[
-            commonStyle.black,
-            commonStyle.semiBold,
-            commonStyle.L,
-            style.sectionContent,
-          ]}
-        >
-          Description
+        <View style={[style.hr]} />
+        <Text style={[commonStyle.grey, commonStyle.semiBold, commonStyle.S]}>
+          Km 5 refinery road oppsite re public road, effurun, Jakarta
         </Text>
-        <Text
-          style={[
-            commonStyle.grey,
-            commonStyle.semiBold,
-            commonStyle.M,
-            style.subTitle,
-          ]}
-        >
-          Cold brewing is a method of brewing that combines ground coffee and
-          cool water and uses time instead of heat to extract the flavor. It is
-          brewed in small batches and steeped for as long as 48 hours.
+        <View style={[style.hr]} />
+        <Text style={[commonStyle.black, commonStyle.semiBold, commonStyle.S]}>
+          +62 81348287878
         </Text>
-        <View style={[style.buttonwrap]}>
-          <Button
-            color="#6A4029"
-            title="ADD TO CART"
-            onPress={() => Alert.alert("Simple Button pressed")}
+      </View>
+      <Text
+        style={[
+          commonStyle.black,
+          commonStyle.semiBold,
+          commonStyle.L,
+          style.sectionContent,
+        ]}
+      >
+        Description
+      </Text>
+      <View style={[style.containerWhite, style.subTitle, commonStyle.mb10per]}>
+        <View style={[style.contentRowLeft]}>
+          <Image
+            source={require("../../images/radioOn.png")}
+            style={{
+              marginRight: 20,
+              resizeMode: "contain",
+            }}
           />
+          <Text
+            style={[
+              commonStyle.black,
+              commonStyle.bold,
+              commonStyle.S,
+              style.subTitle,
+            ]}
+          >
+            Door delivery
+          </Text>
         </View>
+        <View style={[style.hr]} />
+        <View style={[style.contentRowLeft]}>
+          <Image
+            source={require("../../images/radioOff.png")}
+            style={{
+              marginRight: 20,
+              resizeMode: "contain",
+            }}
+          />
+          <Text
+            style={[
+              commonStyle.grey,
+              commonStyle.semiBold,
+              commonStyle.S,
+              style.subTitle,
+            ]}
+          >
+            Pick up at store
+          </Text>
+        </View>
+        <View style={[style.hr]} />
+        <View style={[style.contentRowLeft]}>
+          <Image
+            source={require("../../images/radioOff.png")}
+            style={{
+              marginRight: 20,
+              resizeMode: "contain",
+            }}
+          />
+          <Text
+            style={[
+              commonStyle.grey,
+              commonStyle.semiBold,
+              commonStyle.S,
+              style.subTitle,
+            ]}
+          >
+            Dine in
+          </Text>
+        </View>
+      </View>
+      <View style={[style.buttonwrap]}>
+        <Button
+          color="#6A4029"
+          title="ADD TO CART"
+          onPress={() => Alert.alert("Simple Button pressed")}
+        />
+      </View>
     </View>
   );
 };

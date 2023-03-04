@@ -28,7 +28,7 @@ const HomeScreen = ({ navigation }) => {
               <Pressable
                 style={style.cardWrap}
                 onPress={() => {
-                  navigation.navigate("DetailProduct");
+                  navigation.navigate("Payment");
                   // navigation.push('DetailProduct')
                 }}
               >

@@ -8,6 +8,7 @@ import HomeScreen from "./src/screens/home";
 import Detailproduct from "./src/screens/detailProduct";
 import ProfileScreen from "./src/screens/profile";
 import CheckoutScreen from "./src/screens/checkout";
+import PaymentScreen from "./src/screens/payment";
 //end screens
 
 const Stack = createNativeStackNavigator();
@@ -39,6 +40,11 @@ function App() {
           name="Checkout"
           component={CheckoutScreen}
           options={{ title: "Checkout" }}
+        />
+        <Stack.Screen
+          name="Payment"
+          component={PaymentScreen}
+          options={{ title: "Payment" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -8,6 +8,9 @@ const commonStyle = StyleSheet.create({
   mt2per: {
     marginTop: "5%",
   },
+  mb10per: {
+    marginBottom: "10%",
+  },
   mb2per: {
     marginBottom: "-10%",
   },
@@ -57,10 +60,10 @@ const commonStyle = StyleSheet.create({
     fontSize: 18,
   },
   S: {
-    fontSize: 14,
+    fontSize: 16,
   },
   XS: {
-    fontSize: 12,
+    fontSize: 14,
   },
   //end text size
 });
